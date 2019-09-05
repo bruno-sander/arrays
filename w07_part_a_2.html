@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+<title>Multiply Each Element</title>
+</head>
+<body>
+<form>
+<button type="button" onclick="doIt()">Multiply</button>
+</form>
+<script>
+
+function doIt() {
+var list = [4, 7, 4, 8, 12],
+result = multiply(list, 3);
+document.getElementById("output").innerHTML = "[" + result + "]";
+}
+function multiply(list, multiplier) {
+var i = 0;
+var newArray = [];
+while (i <= list.length - 1) {
+newArray.push(list[i]*multiplier);
+i++;
+}
+return newArray.toString();
+}
+</script>
+<br>
+<div id="output"></div>
+</body>
+</html>

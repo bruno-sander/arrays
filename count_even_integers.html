@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Even Integers</title>
+</head>
+
+<body>
+<form>
+<button type="button" onclick="doIt()">Evenly Count</button>
+
+<p>Count only the even numbers</p>
+<p>4, 7, 4, 8, 12, 10, 8</p>
+
+</form>
+
+<script>
+//Count only the EVEN integers!! 
+function doIt() {
+var list = [4, 7, 4, 8, 12, 10, 8],
+result = countEvens(list);
+document.getElementById("output").innerHTML ="<b>" + result + "<b>";
+}
+function countEvens(list) {
+var i = 0;
+var count = 0;
+while (i <= list.length - 1) {
+if (list[i] % 2 == 0) {
+count += 1;
+i++;
+} else {
+i++;
+}
+}
+return count;
+}
+
+</script>
+<br>
+<div id="output" style="background-color: rgb(207, 207, 228); width: 5%; text-align: center"></div>
+
+</body>
+
+</html>

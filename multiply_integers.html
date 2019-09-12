@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Multiply Each Element</title>
+</head>
+<body>
+
+	<p>Multiply the following numbers:</p>
+	<p>2, 4, 7, 7, 4, 2</p>
+
+<form>
+<button type="button" onclick="doIt()">Multiply</button>
+</form>
+
+<script>
+// Multiply each integer on the list!
+function doIt() {
+var list = [2, 4, 7, 7, 4, 2],
+result = multiply(list, 3);
+document.getElementById("output").innerHTML = "[" + result + "]";
+}
+function multiply(list, multiplier) {
+var i = 0;
+var newArray = [];
+while (i <= list.length - 1) {
+newArray.push(list[i]*multiplier);
+i++;
+}
+return newArray.toString();
+}
+</script>
+
+<br>
+<div id="output" style="background-color: rgb(207, 207, 228); width: 10%; text-align: center"></div>
+
+</body>
+</html>
